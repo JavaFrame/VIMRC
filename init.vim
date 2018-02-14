@@ -1,26 +1,46 @@
-let g:python3_host_prog='C:\Users\Sebastian\AppData\Local\Programs\Python\Python36-32\python.exe'
-let g:python_host_prog='C:\Python27\python.exe'
-
-call plug#begin('~/.vim/plugged')
-
-Plug 'Shougo/denite.nvim'
-Plug 'Shougo/vimfiler.vim'
-Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
-Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/syntastic'
-Plug 'pangloss/vim-javascript'
-Plug 'bling/vim-airline'
-Plug 'mhinz/vim-startify'
-Plug 'rakr/vim-one'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-call plug#end()
-
-colorscheme one
-set background=dark
-
-set number
-
-" call unite#filters#matcher_default#use(['matcher_fuzzy'])
-
-nnoremap <C-p> :Unite file_rec/async<cr>
+  1 "let g:python3_host_prog='/usr/bin/python3'                                                                                                                                                              
+  2 " let g:python_host_prog='C:\Python27\python.exe'                                                                                                                                                       
+  3                                                                                                                                                                                                         
+  4 call plug#begin('~/.vim/plugged')                                                                                                                                                                       
+  5                                                                                                                                                                                                         
+  6 Plug 'Shougo/denite.nvim'                                                                                                                                                                               
+  7 Plug 'Shougo/vimfiler.vim'                                                                                                                                                                              
+  8 Plug 'Shougo/echodoc.vim'                                                                                                                                                                               
+  9 Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}                                                                                                                                             
+ 10                                                                                                                                                                                                         
+ 11 " both                                                                                                                                                                                                  
+ 12 Plug 'Raimondi/delimitMate'                                                                                                                                                                             
+ 13 " php                                                                                                                                                                                                   
+ 14 Plug 'padawan-php/deoplete-padawan', {'do': 'composer install'}                                                                                                                                         
+ 15 Plug 'StanAngeloff/php.vim'                                                                                                                                                                             
+ 16 Plug 'rayburgemeestre/phpfolding.vim'                                                                                                                                                                   
+ 17 Plug '2072/PHP-Indenting-for-VIm'                                                                                                                                                                       
+ 18                                                                                                                                                                                                         
+ 19 " js                                                                                                                                                                                                    
+ 20 Plug 'mhartington/nvim-typescript'                                                                                                                                                                      
+ 21 Plug 'HerringtonDarkholme/yats.vim'                                                                                                                                                                     
+ 22                                                                                                                                                                                                         
+ 23 Plug 'scrooloose/nerdtree'                                                                                                                                                                              
+ 24 Plug 'scrooloose/syntastic'                                                                                                                                                                             
+ 25 Plug 'pangloss/vim-javascript'                                                                                                                                                                          
+ 26 Plug 'bling/vim-airline'                                                                                                                                                                                
+ 27 Plug 'mhinz/vim-startify'                                                                                                                                                                               
+ 28 Plug 'rakr/vim-one'                                                                                                                                                                                     
+ 29 Plug 'Yggdroot/duoduo'                                                                                                                                                                                  
+ 30 Plug 'vim-airline/vim-airline'                                                                                                                                                                          
+ 31 Plug 'vim-airline/vim-airline-themes'                                                                                                                                                                   
+ 32 call plug#end()                                                                                                                                                                                         
+ 33                                                                                                                                                                                                         
+ 34 colorscheme duoduo                                                                                                                                                                                      
+ 35 set background=dark                                                                                                                                                                                     
+ 36                                                                                                                                                                                                         
+ 37 set number                                                                                                                                                                                              
+ 38                                                                                                                                                                                                         
+ 39 nnoremap <C-p> :Denite file_rec<cr>                                                                                                                                                                     
+ 40                                                                                                                                                                                                         
+ 41 let g:deoplete#enable_at_startup = 1                                                                                                                                                                    
+ 42                                                                                                                                                                                                         
+ 43 "php                                                                                                                                                                                                    
+ 44 call deoplete#sources#padawan#UpdateServer()                                                                                                                                                            
+ 45 g:deoplete#sources#padawan#add_parentheses = 1                                                                                                                                                          
+ 46 g:deoplete#sources#padawan#auto_update = 1            
