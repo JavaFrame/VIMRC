@@ -8,7 +8,9 @@ Plug 'scrooloose/nerdtree'
 
 Plug 'Shougo/deoplete.nvim'
 Plug 'zchee/deoplete-go', {'do': 'make'}
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
+Plug 'jodosha/vim-godebug'
 
 Plug 'artur-shaik/vim-javacomplete2'
 Plug 'neomake/neomake'
@@ -40,7 +42,6 @@ set history=100
 
 " indenting
 filetype indent on
-set nowrap
 set tabstop=4
 set shiftwidth=4
 set expandtab
