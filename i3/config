@@ -156,6 +156,8 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 #bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 bindsym $mod+Shift+e exec "~/.config/i3/prompt 'Are you sure you want to logout?' 'i3-msg exit'"
+bindsym $mod+Shift+s exec "~/.config/i3/prompt 'Are you sure you want to shutdown?' 'shutdown -h now'"
+bindsym $mod+Shift+a exec "~/.config/i3/prompt 'Are you sure you want to lock?' 'source /home/sebi/.config/i3/lock/lock'"
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -217,6 +219,8 @@ bar {
 }
 
 bindsym $mod+shift+x exec i3lock --color "$bg-color"
+bindsym $mod+shift+f exec gnome-terminal -e ranger --name=ranger --hide-menubar
+
 bindsym $mod+shift+p exec --no-startup-id pactl set-sink-volume 2 +5% #increase sound volume
 bindsym $mod+shift+minus exec --no-startup-id pactl set-sink-volume 2 -5% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 2 toggle # mute sound
@@ -235,6 +239,7 @@ exec pia
 exec --no-startup-id i3-msg 'workspace $ws9; exec whats-app'
 exec --no-startup-id i3-msg 'workspace $ws9; exec inbox'
 
-exec_always feh --bg-scale /home/sebi/Pictures/Wallpapers/wallpaper#1.jpg
-
+# exec_always feh --bg-scale /home/sebi/Pictures/Wallpapers/wallpaper#1.jpg
+exec_always bash /home/sebi/.config/i3/wallpaper.sh . "collection" 1223439
 exec_always compton -f
+
