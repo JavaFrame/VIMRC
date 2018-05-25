@@ -1,3 +1,0 @@
-#!/bin/bash
-SCRIPT_PATH="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/$(basename "${BASH_SOURCE[0]}")"
-source $( dirname "$SCRIPT_PATH")/i3lock-multimonitor/lock -i ~/Pictures/Wallpapers/wallpaper_lock.png -a '-n --insidecolor=373445ff --ringcolor=ffffffff --line-uses-inside  --keyhlcolor=d23c3dff --bshlcolor=d23c3dff --separatorcolor=00000000  --insidevercolor=fecf4dff --insidewrongcolor=d23c3dff --ringvercolor=ffffffff --ringwrongcolor=ffffffff --indpos=x+86:y+1003 --radius=15 --veriftext= --wrongtext='
